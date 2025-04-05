@@ -3,11 +3,7 @@ import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
 import Webcam from "react-webcam";
 import "./App.css";
-import React, { useEffect, useRef, useState } from "react";
-import * as cocoSsd from "@tensorflow-models/coco-ssd";
-import "@tensorflow/tfjs";
-import Webcam from "react-webcam";
-import "./App.css";
+
 
 const App = () => {
   const webcamRef = useRef(null);
