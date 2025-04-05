@@ -22,7 +22,8 @@ html {
 
 /* Title */
 .title {
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: bold;
   margin-bottom: 20px;
 }
 
@@ -53,11 +54,10 @@ html {
   filter: brightness(0.3) blur(2px);
 }
 
-/* Toggle Button */
-.toggle-button {
+/* Buttons */
+.toggle-button,
+.camera-toggle-button {
   position: absolute;
-  top: 20px;
-  right: 20px;
   padding: 10px 20px;
   background-color: #1e1e1e;
   color: #fff;
@@ -65,13 +65,32 @@ html {
   border-radius: 10px;
   cursor: pointer;
   z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.toggle-button:hover,
+.camera-toggle-button:hover {
+  background-color: #333;
+  border-color: #777;
+}
+
+/* Specific positions */
+.toggle-button {
+  top: 20px;
+  right: 20px;
+}
+
+.camera-toggle-button {
+  top: 20px;
+  left: 20px;
 }
 
 /* Alert message */
 .alert {
   margin-top: 20px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  text-align: center;
 }
 
 .alert.danger {
@@ -84,13 +103,22 @@ html {
 
 /* Responsive adjustment */
 @media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+
   .webcam-wrapper {
     max-width: 100%;
     aspect-ratio: 4 / 3;
   }
 
-  .toggle-button {
-    padding: 8px 16px;
+  .toggle-button,
+  .camera-toggle-button {
+    padding: 8px 14px;
     font-size: 14px;
+  }
+
+  .alert {
+    font-size: 18px;
   }
 }
